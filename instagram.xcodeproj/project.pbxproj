@@ -19,6 +19,7 @@
 		DE9971D31E7128670073B655 /* FriendSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9971D21E7128670073B655 /* FriendSearchViewController.swift */; };
 		DE9971D61E71353C0073B655 /* PhotoTakingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9971D51E71353C0073B655 /* PhotoTakingHelper.swift */; };
 		DE9971D81E721D1C0073B655 /* POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9971D71E721D1C0073B655 /* POST.swift */; };
+		DE9971DB1E7394530073B655 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9971DA1E7394530073B655 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		DE9971D21E7128670073B655 /* FriendSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendSearchViewController.swift; sourceTree = "<group>"; };
 		DE9971D51E71353C0073B655 /* PhotoTakingHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoTakingHelper.swift; sourceTree = "<group>"; };
 		DE9971D71E721D1C0073B655 /* POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = POST.swift; sourceTree = "<group>"; };
+		DE9971DA1E7394530073B655 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		E79B3EC325C0B9B25183E4DB /* Pods_instagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -90,6 +92,7 @@
 		DE9971AF1E710FDC0073B655 /* instagram */ = {
 			isa = PBXGroup;
 			children = (
+				DE9971D91E7394380073B655 /* Cell */,
 				DE9971C91E71140C0073B655 /* View */,
 				DE9971C81E7113EB0073B655 /* Delegate */,
 				DE9971C61E7113AD0073B655 /* Model */,
@@ -160,6 +163,14 @@
 				DE9971D51E71353C0073B655 /* PhotoTakingHelper.swift */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		DE9971D91E7394380073B655 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DE9971DA1E7394530073B655 /* TableViewCell.swift */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,6 +300,7 @@
 				DE9971CF1E7121FC0073B655 /* MainPageViewController.swift in Sources */,
 				DE9971B11E710FDC0073B655 /* AppDelegate.swift in Sources */,
 				DE9971B91E710FDC0073B655 /* instagram.xcdatamodeld in Sources */,
+				DE9971DB1E7394530073B655 /* TableViewCell.swift in Sources */,
 				DE9971D81E721D1C0073B655 /* POST.swift in Sources */,
 				DE9971CD1E71146F0073B655 /* constants.swift in Sources */,
 				DE9971D61E71353C0073B655 /* PhotoTakingHelper.swift in Sources */,

@@ -12,7 +12,8 @@ import Parse
 class POST: PFObject, PFSubclassing {
     @NSManaged var imageFile: PFFile?
     @NSManaged var user: PFUser?
-    static let sharedinstance = PFObject()
+    var photoUploadTask : UIBackgroundTaskIdentifier?
+    
     var image : UIImage?
     
     //  MARK: PFSubclassing Protocol
@@ -27,9 +28,17 @@ class POST: PFObject, PFSubclassing {
             guard let imageFile = PFFile(name: "image.jpg", data: imageData) else {return}
             
             user = PFUser.current()
-            
             self.imageFile = imageFile
-            saveInBackground(block: nil)
+            
+            //  MARK: Requesting a long running background task ---> request some extra time to finish up tasks that started before the app got suspended
+            
+            photoUploadTask = UIApplication.shared.beginBackgroundTask(expirationHandler: { 
+              UIApplication.shared.endBackgroundTask(self.photoUploadTask!)
+            })
+            
+            saveInBackground(block: { (Bool, error) in
+                UIApplication.shared.endBackgroundTask(self.photoUploadTask!)
+            })
         }
     }
     

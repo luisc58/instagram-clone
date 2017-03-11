@@ -39,6 +39,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("Not logged in")
         }
         
+        let acl = PFACL()
+        acl.getPublicReadAccess = true
+        PFACL.setDefault(acl, withAccessForCurrentUser: true)
+        
         return true
     }
 

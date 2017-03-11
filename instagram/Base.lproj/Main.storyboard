@@ -63,16 +63,44 @@
                     <view key="view" contentMode="scaleToFill" id="KiD-ic-X6h">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hsg-KR-c4D">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="pBg-lb-Prt" customClass="TableViewCell" customModule="instagram" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pBg-lb-Prt" id="YiR-Nf-GN7">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="VOP-mQ-n5x" id="z9A-Db-sLD"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.41247244319999998" green="0.41247244319999998" blue="0.41247244319999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hsg-KR-c4D" firstAttribute="leading" secondItem="KiD-ic-X6h" secondAttribute="leading" id="3ud-r6-VA3"/>
+                            <constraint firstItem="9gJ-Iv-fHp" firstAttribute="top" secondItem="hsg-KR-c4D" secondAttribute="bottom" id="4Mc-Zd-dci"/>
+                            <constraint firstItem="hsg-KR-c4D" firstAttribute="top" secondItem="hvO-VI-rUz" secondAttribute="bottom" id="DOa-ez-aIh"/>
+                            <constraint firstAttribute="trailing" secondItem="hsg-KR-c4D" secondAttribute="trailing" id="V5f-Jn-HS0"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="home" selectedImage="home" id="eAi-l5-VHL">
-                        <inset key="imageInsets" minX="0.0" minY="8" maxX="0.0" maxY="-5"/>
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="tableView" destination="hsg-KR-c4D" id="zjT-KU-04t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EhE-2f-P0Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-156" y="-766"/>
+            <point key="canvasLocation" x="-156" y="-766.86656671664173"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="RwE-vh-opL">
