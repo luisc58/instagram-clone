@@ -20,6 +20,7 @@
 		DE9971D61E71353C0073B655 /* PhotoTakingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9971D51E71353C0073B655 /* PhotoTakingHelper.swift */; };
 		DE9971D81E721D1C0073B655 /* POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9971D71E721D1C0073B655 /* POST.swift */; };
 		DE9971DB1E7394530073B655 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9971DA1E7394530073B655 /* TableViewCell.swift */; };
+		DE9971DD1E73A16D0073B655 /* ParseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9971DC1E73A16C0073B655 /* ParseHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		DE9971D51E71353C0073B655 /* PhotoTakingHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoTakingHelper.swift; sourceTree = "<group>"; };
 		DE9971D71E721D1C0073B655 /* POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = POST.swift; sourceTree = "<group>"; };
 		DE9971DA1E7394530073B655 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		DE9971DC1E73A16C0073B655 /* ParseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseHelper.swift; sourceTree = "<group>"; };
 		E79B3EC325C0B9B25183E4DB /* Pods_instagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -161,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				DE9971D51E71353C0073B655 /* PhotoTakingHelper.swift */,
+				DE9971DC1E73A16C0073B655 /* ParseHelper.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				DE9971D61E71353C0073B655 /* PhotoTakingHelper.swift in Sources */,
 				DE9971D31E7128670073B655 /* FriendSearchViewController.swift in Sources */,
 				DE9971D11E71284B0073B655 /* PhotoViewController.swift in Sources */,
+				DE9971DD1E73A16D0073B655 /* ParseHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -2,6 +2,7 @@
 
 import UIKit
 import Parse
+import Bond
 
 class MainPageViewController: UIViewController {
     var phototakingHelper : PhotoTakingHelper?
@@ -18,36 +19,19 @@ class MainPageViewController: UIViewController {
     
    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        //  Following Query
-        let followingQuery = PFQuery(className: "Follow")
-        followingQuery.whereKey("fromUser", equalTo: PFUser.current()!)
-        
-        //  query that fetches posts created by users that current user follows
-        let postsFromFollowedUsers = POST.query()
-        postsFromFollowedUsers?.whereKey("user", matchesKey: "toUser", in: followingQuery)  
-        //  query that retrieves posts current user has posted
-        let postsFromThisUser = POST.query()
-        postsFromThisUser?.whereKey("user", equalTo: PFUser.current()!)
-        // Combine two queries
-        let query = PFQuery.orQuery(withSubqueries: [postsFromFollowedUsers!, postsFromThisUser!])
-        
-        query.includeKey("user")
-        query.order(byDescending: "createAt")
     
-      // MARK: Network request
-    query.findObjectsInBackground { ( result: [PFObject]?, error) in
-            self.posts = result as? [POST] ?? []
-            self.tableView.reloadData()
-        
-        }
-        
+     // MARK: Network request
+    ParseHelper.mainPagerequestForCurrentUser { (result : [PFObject]?, error) in
+        self.posts = result as? [POST] ?? []
+        self.tableView.reloadData()
     }
-    
+}
+        
     func takePhoto() {
         // instantiate photo taking class, provide callback for when photo is selected
         phototakingHelper = PhotoTakingHelper(viewController: self.tabBarController!) { (image: UIImage?) in
                 let post = POST()
-                post.image = image
+                post.image.value = image
                 post.uploadPost()
             }
      }
@@ -85,9 +69,13 @@ extension MainPageViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // 2
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TableViewCell
         
-        cell.textLabel!.text = "Post"
+        let post = posts[indexPath.row]
+        
+        post.downloadImage()
+        
+        cell.post = post
         
         return cell
     }

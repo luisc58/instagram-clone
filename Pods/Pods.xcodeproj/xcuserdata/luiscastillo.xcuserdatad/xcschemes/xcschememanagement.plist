@@ -9,6 +9,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Bond.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Diff.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Parse.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -19,15 +29,35 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ReactiveKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>3A43EAF0CA527AB77ADC849CB58ADAD1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>51CB0AF616C6306147B99C320EB6D3ED</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C2E178FFEC75AE40B88E00DE3AC61746</key>
+		<key>B9DD5E240AED41A5D46CE2FF2B6C28DD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DBDB2D65118D4AE178601BA5E036625F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E60141F850446AA7DBBB83924128C0E8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
