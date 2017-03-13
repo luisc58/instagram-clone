@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7CE315C714B3558EDC7DF942 /* Pods_instagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E79B3EC325C0B9B25183E4DB /* Pods_instagram.framework */; };
+		DE2358F31E76394900B2C7D2 /* FriendSearchTableViewcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2358F21E76394900B2C7D2 /* FriendSearchTableViewcell.swift */; };
 		DE9971B11E710FDC0073B655 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9971B01E710FDC0073B655 /* AppDelegate.swift */; };
 		DE9971B61E710FDC0073B655 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE9971B41E710FDC0073B655 /* Main.storyboard */; };
 		DE9971B91E710FDC0073B655 /* instagram.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE9971B71E710FDC0073B655 /* instagram.xcdatamodeld */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		CC0C41525577BF767DA83D1D /* Pods-instagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-instagram/Pods-instagram.debug.xcconfig"; sourceTree = "<group>"; };
 		CF890472B77A6625E5EE77AF /* Pods-instagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-instagram/Pods-instagram.release.xcconfig"; sourceTree = "<group>"; };
+		DE2358F21E76394900B2C7D2 /* FriendSearchTableViewcell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendSearchTableViewcell.swift; sourceTree = "<group>"; };
 		DE9971AD1E710FDC0073B655 /* instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE9971B01E710FDC0073B655 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE9971B51E710FDC0073B655 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				DE9971DA1E7394530073B655 /* TableViewCell.swift */,
+				DE2358F21E76394900B2C7D2 /* FriendSearchTableViewcell.swift */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				DE9971CD1E71146F0073B655 /* constants.swift in Sources */,
 				DE9971D61E71353C0073B655 /* PhotoTakingHelper.swift in Sources */,
 				DE9971D31E7128670073B655 /* FriendSearchViewController.swift in Sources */,
+				DE2358F31E76394900B2C7D2 /* FriendSearchTableViewcell.swift in Sources */,
 				DE9971D11E71284B0073B655 /* PhotoViewController.swift in Sources */,
 				DE9971DD1E73A16D0073B655 /* ParseHelper.swift in Sources */,
 			);

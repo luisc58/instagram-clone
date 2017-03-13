@@ -1,12 +1,18 @@
 
 
 import UIKit
-import Parse
+import Parse 
 import Bond
+import ConvenienceKit
 
 class MainPageViewController: UIViewController {
     var phototakingHelper : PhotoTakingHelper?
+    //var timelineComponent: TimelineComponent<POST, MainPageViewController>!
     var posts: [POST] = []
+    
+    let defaultRange = 0..<5
+    let additionalRangeSize = 5
+    
     @IBOutlet weak var tableView: UITableView!
     
     
@@ -26,6 +32,7 @@ class MainPageViewController: UIViewController {
         self.tableView.reloadData()
     }
 }
+    
         
     func takePhoto() {
         // instantiate photo taking class, provide callback for when photo is selected
@@ -77,9 +84,13 @@ extension MainPageViewController: UITableViewDataSource {
         
         cell.post = post
         
+        post.fetchlikes()
+        
         return cell
     }
 
 }
+
+
 
 

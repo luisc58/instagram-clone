@@ -8,5 +8,6 @@ target 'instagram' do
   # Pods for instagram
 	pod ‘Parse’
     pod 'Bond', '~> 6.0'
+    pod 'ConvenienceKit'
 
 end

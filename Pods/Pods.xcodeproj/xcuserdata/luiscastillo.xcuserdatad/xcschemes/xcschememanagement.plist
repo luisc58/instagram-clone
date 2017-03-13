@@ -14,6 +14,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ConvenienceKit-ConvenienceKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ConvenienceKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Diff.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,6 +47,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>1582B549EBFCCA55760B707D54411538</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>3A43EAF0CA527AB77ADC849CB58ADAD1</key>
 		<dict>
 			<key>primary</key>
@@ -47,17 +62,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>8CB82792FE7756E1A1D5E6B850878396</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A2EA221776DEBB33B15C0946254D7A37</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>B9DD5E240AED41A5D46CE2FF2B6C28DD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>DBDB2D65118D4AE178601BA5E036625F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E60141F850446AA7DBBB83924128C0E8</key>
 		<dict>
 			<key>primary</key>
 			<true/>

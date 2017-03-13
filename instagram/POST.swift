@@ -16,6 +16,7 @@ class POST: PFObject, PFSubclassing {
     var photoUploadTask : UIBackgroundTaskIdentifier?
     
     var image: Observable<UIImage?> = Observable(nil)  // asynchronously image
+    var likes: Observable<[PFUser]?> = Observable(nil)  //Observable optional Array
     
     //  MARK: PFSubclassing Protocol
     
@@ -55,6 +56,46 @@ class POST: PFObject, PFSubclassing {
         }
         
     }
+    
+    func fetchlikes() {
+        if (likes.value != nil) {
+            return
+        }
+        
+        ParseHelper.likesForPost(post: self) { (likes, error) in
+            
+            let validLikes = likes?.filter { like in like[ParseLikeFromUser] != nil }
+            
+            self.likes.value = validLikes?.map { like in 
+                let fromUser = like[ParseLikeFromUser] as! PFUser
+                
+                return fromUser
+            }
+        }
+    }
+    
+    func doesUserLikePost(user: PFUser) -> Bool {
+        if let likes = likes.value {
+            return likes.contains(user)
+        } else {
+            return false
+        }
+    }
+    
+    func toggleLikePost(user: PFUser) {
+        if(doesUserLikePost(user: user)) {
+            // if post is liked, unlike it
+            likes.value = likes.value?.filter { $0 != user }
+            ParseHelper.unlikePost(user: user, post: self)
+            
+        } else {
+        
+            // If post is not liked yet
+            likes.value?.append(user)
+            ParseHelper.likePost(user: user, post: self)
+        }
+    }       /* If the user doesn't like the post yet, we add them to the local cache and then sync the change with Parse */
+    
     
     override init() {
         super.init()
