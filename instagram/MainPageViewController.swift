@@ -12,6 +12,7 @@ class MainPageViewController: UIViewController {
     
     let defaultRange = 0..<5
     let additionalRangeSize = 5
+    var timelineComponent: MainPageViewController!
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -68,6 +69,14 @@ extension MainPageViewController: UITabBarControllerDelegate {
 // Allows us to see if request is working prperly
 
 extension MainPageViewController: UITableViewDataSource {
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return posts.count   
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
       
@@ -87,6 +96,19 @@ extension MainPageViewController: UITableViewDataSource {
         post.fetchlikes()
         
         return cell
+    }
+    
+    private func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerCell = tableView.dequeueReusableCell(withIdentifier: "PostHeader") as! PostHeaderTableViewCell
+        
+        let post = posts[section]
+        headerCell.post = post
+        
+        return headerCell
+    }
+    
+    private func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
     }
 
 }
